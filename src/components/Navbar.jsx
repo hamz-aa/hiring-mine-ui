@@ -1,20 +1,27 @@
+import { DarkModeOutlined, LightModeOutlined } from "@mui/icons-material";
 import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1em 3em;
+  padding: 1em 1.6em;
   font-size: 1.6rem;
 `;
 
 const Logo = styled.img`
   height: 36px;
+  cursor: pointer;
 `;
 
 const Menu = styled.ul`
   display: flex;
   gap: 20px;
+  margin-right: 100px;
+
+  & > li {
+    cursor: pointer;
+  }
 
   & > li:last-child {
     color: rgb(55, 40, 183);
@@ -26,7 +33,18 @@ const Menu = styled.ul`
   }
 `;
 
-const ThemeChanger = styled.div``;
+const ThemeChanger = styled.div`
+  background-color: #aab4be;
+  width: 40px;
+  height: 20px;
+  border-radius: 15px;
+  margin-right: 20px;
+
+  & > * {
+    font-size: 2rem;
+    width: 30px;
+  }
+`;
 
 const Navbar = () => {
   return (
@@ -40,7 +58,10 @@ const Navbar = () => {
         <li>Join Now</li>
         <li className="active">Employee / Post Job</li>
       </Menu>
-      <ThemeChanger>Toggle</ThemeChanger>
+      <ThemeChanger>
+        <LightModeOutlined className="light-mode" />
+        <DarkModeOutlined className="dark-mode" />
+      </ThemeChanger>
     </Container>
   );
 };
