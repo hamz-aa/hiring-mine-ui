@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { DarkModeOutlined, LightModeOutlined } from "@mui/icons-material";
+import { DarkMode, LightModeOutlined } from "@mui/icons-material";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -37,26 +37,30 @@ const Menu = styled.ul`
 
 const ThemeChanger = styled.div`
   background-color: #aab4be;
-  width: 40px;
+  width: 44px;
   height: 20px;
   border-radius: 15px;
   margin-right: 20px;
   position: relative;
 
-  & > .light-mode {
-    background-color: #001e3c;
+  & > * {
+    cursor: pointer;
     color: #fff;
     border-radius: 50%;
     padding: 0.3em;
     position: absolute;
+    top: -5px;
+  }
+
+  & > .light-mode {
+    background-color: #001e3c;
+    left: -5px;
   }
 
   & > .dark-mode {
     background-color: #003892;
     color: #fff;
-    border-radius: 50%;
-    padding: 0.3em;
-    position: absolute;
+    right: -5px;
   }
 `;
 
@@ -73,11 +77,14 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         <li className="active">Employee / Post Job</li>
       </Menu>
       <ThemeChanger onClick={() => setDarkMode(!darkMode)}>
-        <LightModeOutlined
-          className="light-mode"
-          style={{ fontSize: "2rem" }}
-        />
-        <DarkModeOutlined className="dark-mode" style={{ fontSize: "2rem" }} />
+        {darkMode ? (
+          <DarkMode className="dark-mode" style={{ fontSize: "2rem" }} />
+        ) : (
+          <LightModeOutlined
+            className="light-mode"
+            style={{ fontSize: "2rem" }}
+          />
+        )}
       </ThemeChanger>
     </Container>
   );
