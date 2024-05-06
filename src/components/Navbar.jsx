@@ -42,9 +42,9 @@ const ThemeChanger = styled.div`
   border-radius: 15px;
   margin-right: 20px;
   position: relative;
+  cursor: pointer;
 
   & > * {
-    cursor: pointer;
     color: #fff;
     border-radius: 50%;
     padding: 0.3em;
@@ -77,7 +77,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         <li className="active">Employee / Post Job</li>
       </Menu>
       <ThemeChanger onClick={() => setDarkMode(!darkMode)}>
-        {darkMode ? (
+        {darkMode === true ? (
           <DarkMode className="dark-mode" style={{ fontSize: "2rem" }} />
         ) : (
           <LightModeOutlined

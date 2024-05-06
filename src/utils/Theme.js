@@ -4,6 +4,7 @@ export const lightTheme = {
   bg: "#ffffff",
   text: "black",
   textPrimary: "#6851ff",
+  border: "rgb(159, 173, 188)",
 };
 
 export const darkTheme = {
@@ -12,4 +13,5 @@ export const darkTheme = {
   bg: "#292930",
   text: "white",
   textPrimary: "#6851ff",
+  border: "rgb(23, 22, 22)",
 };
