@@ -6,7 +6,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1em 1.6em;
+  padding: 1.2em 1.6em;
   font-size: 1.6rem;
 `;
 
@@ -18,7 +18,7 @@ const Logo = styled.img`
 const Menu = styled.ul`
   display: flex;
   gap: 20px;
-  margin-right: 100px;
+  margin-right: 50px;
   color: ${({ theme }) => theme.text};
 
   & > li {
@@ -37,7 +37,7 @@ const Menu = styled.ul`
 
 const ThemeChanger = styled.div`
   background-color: #aab4be;
-  width: 44px;
+  width: 40px;
   height: 20px;
   border-radius: 15px;
   margin-right: 20px;
@@ -47,7 +47,7 @@ const ThemeChanger = styled.div`
   & > * {
     color: #fff;
     border-radius: 50%;
-    padding: 0.3em;
+    padding: 0.2em;
     position: absolute;
     top: -5px;
   }
@@ -78,11 +78,11 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       </Menu>
       <ThemeChanger onClick={() => setDarkMode(!darkMode)}>
         {darkMode === true ? (
-          <DarkMode className="dark-mode" style={{ fontSize: "2rem" }} />
+          <DarkMode className="dark-mode" style={{ fontSize: "3rem" }} />
         ) : (
           <LightModeOutlined
             className="light-mode"
-            style={{ fontSize: "2rem" }}
+            style={{ fontSize: "3rem" }}
           />
         )}
       </ThemeChanger>

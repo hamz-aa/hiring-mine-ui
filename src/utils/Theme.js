@@ -5,6 +5,7 @@ export const lightTheme = {
   text: "black",
   textPrimary: "#6851ff",
   border: "rgb(159, 173, 188)",
+  btnHover: "#f7f6ff",
 };
 
 export const darkTheme = {
@@ -14,4 +15,5 @@ export const darkTheme = {
   text: "white",
   textPrimary: "#6851ff",
   border: "rgb(23, 22, 22)",
+  btnHover: "#24232f",
 };
