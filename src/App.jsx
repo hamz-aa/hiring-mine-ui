@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import { darkTheme, lightTheme } from "./utils/Theme";
 import Landing from "./components/Landing";
+import Details from "./components/Details";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -30,6 +31,7 @@ function App() {
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
         <Landing />
         <Img src="assets/landing-img.png" />
+        <Details />
       </ThemeProvider>
     </>
   );
