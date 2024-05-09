@@ -1,12 +1,38 @@
+import {
+  AccountBoxOutlined,
+  SearchOutlined,
+  UploadFileOutlined,
+  WorkOutline,
+} from "@mui/icons-material";
 import styled from "styled-components";
 
-const Container = styled.div``;
+const Container = styled.div`
+  padding: 6em 2.4em 2em 2.4em;
+`;
 
-const Heading = styled.h2``;
+const Heading = styled.h2`
+  font-size: 4.8rem;
+  font-weight: 600;
+  text-align: center;
 
-const Text = styled.p``;
+  & > span {
+    color: ${({ theme }) => theme.textPrimary};
+  }
+`;
 
-const CardWrapper = styled.div``;
+const Text = styled.p`
+  font-weight: 400;
+  font-size: 2rem;
+  color: ${({ theme }) => theme.text};
+  line-height: 3rem;
+  margin-block: 2rem;
+  text-align: center;
+  margin: 0;
+`;
+
+const CardWrapper = styled.div`
+  display: flex;
+`;
 
 const Card = styled.div``;
 
@@ -17,33 +43,52 @@ const SubText = styled.p``;
 const Details = () => {
   return (
     <Container>
-      <Heading>Lorem ipsum dolor sit amet.</Heading>
-      <Text>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</Text>
+      <Heading>
+        Get Hired In 4 <span>Quick Easy Steps (Coming Soon)</span>
+      </Heading>
+      <Text>
+        The quickest and the most effective way to get hired by the top firm.
+      </Text>
       <CardWrapper>
         <Card>
-          <i>icon</i>
-          <SubHeading>sub heading</SubHeading>
-          <SubText>sub text</SubText>
+          <AccountBoxOutlined />
+          <SubHeading>Create an Account</SubHeading>
+          <SubText>
+            Join our vibrant community. Create your account and unlock boundless
+            opportunities.
+          </SubText>
         </Card>
         <Card>
-          <i>icon</i>
-          <SubHeading>sub heading</SubHeading>
-          <SubText>sub text</SubText>
+          <SearchOutlined />
+          <SubHeading>Search a Job</SubHeading>
+          <SubText>
+            Discover your ideal job. Our intuitive search feature makes job
+            hunting effortless.
+          </SubText>
         </Card>
         <Card>
-          <i>icon</i>
-          <SubHeading>sub heading</SubHeading>
-          <SubText>sub text</SubText>
+          <UploadFileOutlined />
+          <SubHeading>Upload CV/Resume</SubHeading>
+          <SubText>
+            Showcase your expertise. Upload your CV or resume and stand out to
+            employers.
+          </SubText>
         </Card>
         <Card>
-          <i>icon</i>
-          <SubHeading>sub heading</SubHeading>
-          <SubText>sub text</SubText>
+          <WorkOutline />
+          <SubHeading>Get a Job</SubHeading>
+          <SubText>
+            Achieve your career goals. Apply for jobs and embark on your next
+            adventure.
+          </SubText>
         </Card>
       </CardWrapper>
-      <Heading>Lorem ipsum dolor sit amet consectetur.</Heading>
+      <Heading>
+        Find Your Dream Job <span>Super Fast Ever.</span>
+      </Heading>
       <Text>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos.
+        We are here to help job seekers connect with organizer and companies. We
+        are provides the best opportunities to professional people.
       </Text>
     </Container>
   );
