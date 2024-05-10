@@ -5,6 +5,7 @@ import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import { darkTheme, lightTheme } from "./utils/Theme";
 import Landing from "./components/Landing";
 import Details from "./components/Details";
+import Categories from "./components/Categories";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -47,6 +48,7 @@ function App() {
         <ImgContainer>
           <Img src="assets/Dream-Job.png" />
         </ImgContainer>
+        <Categories />
       </ThemeProvider>
     </>
   );
