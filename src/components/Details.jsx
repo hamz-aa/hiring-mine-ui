@@ -14,6 +14,7 @@ const Heading = styled.h2`
   font-size: 4.8rem;
   font-weight: 600;
   text-align: center;
+  color: ${({ theme }) => theme.text};
 
   & > span {
     color: ${({ theme }) => theme.textPrimary};
@@ -32,13 +33,44 @@ const Text = styled.p`
 
 const CardWrapper = styled.div`
   display: flex;
+  padding: 5em 2em 2em 2em;
+  gap: 15px;
 `;
 
-const Card = styled.div``;
+const Card = styled.div`
+  border: 2px solid ${({ theme }) => theme.textPrimary};
+  background-color: ${({ theme }) => theme.bg};
+  border-radius: 16px;
+  padding: 16px 26px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 
-const SubHeading = styled.h5``;
+  & > *:first-child {
+    color: ${({ theme }) => theme.textPrimary};
+    font-size: 2.5rem;
+  }
 
-const SubText = styled.p``;
+  &:hover {
+    box-shadow: rgba(104, 81, 255, 0.4) 0px 5px 15px;
+    transition: all 0.6s ease;
+  }
+`;
+
+const SubHeading = styled.h5`
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: ${({ theme }) => theme.textPrimary};
+`;
+
+const SubText = styled.p`
+  font-size: 1.6rem;
+  color: ${({ theme }) => theme.text};
+  line-height: 2.5rem;
+`;
 
 const Details = () => {
   return (
@@ -87,8 +119,9 @@ const Details = () => {
         Find Your Dream Job <span>Super Fast Ever.</span>
       </Heading>
       <Text>
-        We are here to help job seekers connect with organizer and companies. We
-        are provides the best opportunities to professional people.
+        We are here to help job seekers connect with organizations and
+        companies. We provide <br /> the best opportunities to professional
+        people.
       </Text>
     </Container>
   );

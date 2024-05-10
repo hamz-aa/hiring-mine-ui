@@ -17,6 +17,18 @@ const Img = styled.img`
   height: 100%;
 `;
 
+const ImgContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 3em 0;
+
+  & > img {
+    max-width: 250px;
+    height: auto;
+    display: block;
+  }
+`;
+
 function App() {
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("darkMode") || false
@@ -32,6 +44,9 @@ function App() {
         <Landing />
         <Img src="assets/landing-img.png" />
         <Details />
+        <ImgContainer>
+          <Img src="assets/Dream-Job.png" />
+        </ImgContainer>
       </ThemeProvider>
     </>
   );
