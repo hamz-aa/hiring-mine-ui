@@ -1,3 +1,4 @@
+import { ArrowRightAlt } from "@mui/icons-material";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -58,6 +59,22 @@ const SubText = styled.p`
   line-height: 2.5rem;
 `;
 
+const Link = styled.a`
+  font-size: 1.6rem;
+  color: ${({ theme }) => theme.textPrimary};
+  text-decoration: underline;
+  position: absolute;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+
+  & > * {
+    font-size: 2.5rem !important;
+  }
+`;
+
 const Categories = () => {
   return (
     <Container>
@@ -106,6 +123,10 @@ const Categories = () => {
           <SubText>120 Jobs</SubText>
         </Card>
       </CardWrapper>
+      <Link>
+        View All
+        <ArrowRightAlt />
+      </Link>
     </Container>
   );
 };
