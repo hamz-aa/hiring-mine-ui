@@ -6,6 +6,7 @@ import { darkTheme, lightTheme } from "./utils/Theme";
 import Landing from "./components/Landing";
 import Details from "./components/Details";
 import Categories from "./components/Categories";
+import Jobs from "./components/Jobs";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -49,6 +50,7 @@ function App() {
           <Img src="assets/Dream-Job.png" />
         </ImgContainer>
         <Categories />
+        <Jobs />
       </ThemeProvider>
     </>
   );
