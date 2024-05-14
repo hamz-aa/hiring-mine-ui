@@ -7,6 +7,7 @@ import Landing from "./components/Landing";
 import Details from "./components/Details";
 import Categories from "./components/Categories";
 import Jobs from "./components/Jobs";
+import Footer from "./components/Footer";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -51,6 +52,8 @@ function App() {
         </ImgContainer>
         <Categories />
         <Jobs />
+        <Img src="assets/Dream-Job.png" />
+        <Footer />
       </ThemeProvider>
     </>
   );
