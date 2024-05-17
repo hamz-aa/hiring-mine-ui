@@ -17,16 +17,16 @@ const Footer = () => {
       <Left>
         <Logo />
         <Text></Text>
-        <SubHeading></SubHeading>
+        <SubHeading>Follow Us</SubHeading>
         <SocialMediaIcons></SocialMediaIcons>
       </Left>
       <Right>
-        <BoldText></BoldText>
-        <EmailContent></EmailContent>
+        <BoldText>Contact Us</BoldText>
+        <EmailContent>portal.hiringmine@gmail.com</EmailContent>
       </Right>
       <Hr />
-      <Text></Text>
-      <Text></Text>
+      <Text>Privacy Policy</Text>
+      <Text>Copyright Hiringmine 2024. All Rights Reserved</Text>
     </Container>
   );
 };
