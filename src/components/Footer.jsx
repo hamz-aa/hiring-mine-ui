@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
-const Container = styled.div``;
+const Container = styled.div`
+  padding: 6em 2.4em 2em 2.4em;
+  display: flex;
+  justify-content: space-between;
+`;
+
 const Left = styled.div``;
 const Right = styled.div``;
 const Logo = styled.img``;
